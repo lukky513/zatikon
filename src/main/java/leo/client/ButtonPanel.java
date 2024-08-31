@@ -60,4 +60,11 @@ public class ButtonPanel extends LeoContainer {
     public int getY() {
         return super.getY() + Client.getGameData().getStatPanel().getHeight() + SideBoard.MARGIN;
     }
+
+    public void triggerNthButton(int n) {
+        var components = getComponents();
+        if (components.size() >= n) {
+            components.get(n - 1).clickAt(0, 0);
+        }
+    }
 }

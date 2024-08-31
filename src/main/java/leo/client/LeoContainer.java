@@ -8,6 +8,8 @@ package leo.client;
 
 // imports
 
+import org.tinylog.Logger;
+
 import java.awt.*;
 import java.util.Vector;
 
@@ -41,6 +43,8 @@ public class LeoContainer extends LeoComponent {
     // Activate the component
     /////////////////////////////////////////////////////////////////
     public boolean clickAt(int x, int y) {
+        Logger.debug("button clicked at " + this.getClass().getName());
+
         if (!components.isEmpty()) {
             LeoComponent last = components.lastElement();
             if (last instanceof TutorialBoard) {

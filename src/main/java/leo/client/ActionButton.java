@@ -110,10 +110,13 @@ public class ActionButton extends LeoComponent {
             }
 
             if (Client.getGameData().getSelectedUnit().getMove() == action ||
-                    Client.getGameData().getSelectedUnit().getAttack() == action)
+                    Client.getGameData().getSelectedUnit().getAttack() == action) {
+                Logger.debug("set selected action to null");
                 Client.getGameData().setSelectedAction(null);
-            else
+            } else {
+                Logger.debug("set selected action to action");
                 Client.getGameData().setSelectedAction(action);
+            }
 
             if (Client.getGameData().getSelectedUnit().isDead())
                 Client.getGameData().setSelectedUnit(null);

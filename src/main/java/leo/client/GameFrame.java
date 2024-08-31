@@ -202,6 +202,26 @@ public class GameFrame extends Frame implements MouseListener, MouseMotionListen
             case KeyEvent.VK_ESCAPE:
                 //Client.shutdown();
                 break;
+            case KeyEvent.VK_F1:
+                Client.getGameData().getButtonPanel().triggerNthButton(1);
+                Logger.debug("F1 pressed");
+                break;
+            case KeyEvent.VK_F2:
+                Client.getGameData().getButtonPanel().triggerNthButton(2);
+                Logger.debug("F2 pressed");
+                break;
+            case KeyEvent.VK_F3:
+                Client.getGameData().getButtonPanel().triggerNthButton(3);
+                Logger.debug("F3 pressed");
+                break;
+            case KeyEvent.VK_F4:
+                Client.getGameData().getButtonPanel().triggerNthButton(4);
+                Logger.debug("F4 pressed");
+                break;
+            case KeyEvent.VK_F5:
+                Client.getGameData().getButtonPanel().triggerNthButton(5);
+                Logger.debug("F5 pressed");
+                break;
         }
     }
 

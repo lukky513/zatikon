@@ -756,6 +756,10 @@ public class ClientGameData {
         return sideBoard;
     }
 
+    public ButtonPanel getButtonPanel() {
+        return buttonPanel;
+    }
+
     public TextBoard getTextBoard() {
         return textBoard;
     }

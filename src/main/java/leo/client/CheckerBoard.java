@@ -825,6 +825,7 @@ public class CheckerBoard extends LeoComponent {
             }
 
             if (actionTargets != null) {
+                Logger.debug("draw action tarrgets");
                 highlight(g, actionTargets, actionType, Action.TYPE_COLOR[type], alphaHalf, !oldTargetsEnemy);
             }
 
@@ -889,8 +890,11 @@ public class CheckerBoard extends LeoComponent {
         if (selection != null) {
 
             Action selectedAction = Client.getGameData().getSelectedAction();
+
             if (selection.getTeam() == Unit.TEAM_2 || selection.getCastle() == Client.getGameData().getEnemyCastle()) {
                 if (selectedAction != null) {
+                    Logger.debug("selected action: " + selectedAction.getName());
+
                     actionType = selectedAction.getTargetType();
                     type = selectedAction.getType();
                     actionTargets = selectedAction.getClientTargets();
@@ -917,6 +921,8 @@ public class CheckerBoard extends LeoComponent {
                 }
 
             } else {
+                Logger.debug("well huh");
+
                 actionType = selectedAction.getTargetType();
                 type = selectedAction.getType();
                 actionTargets = selectedAction.getClientTargets();
